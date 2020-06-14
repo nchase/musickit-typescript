@@ -14,7 +14,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    album(id: string, parameters?: QueryParameters): Promise<Resource>;
+    album(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Album>;
     /**
      * Fetch one or more library albums using their identifiers.
      *
@@ -22,7 +22,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    albums(ids: string[] | null, parameters?: QueryParameters): Promise<Resource[]>;
+    albums(ids: string[] | null, parameters?: QueryParameters): Promise<AppleMusicApi.Album[]>;
     /**
      * Fetch a library artist using its identifier.
      *
@@ -30,7 +30,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    artist(id: string, parameters?: QueryParameters): Promise<Resource>;
+    artist(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Artist>;
     /**
      * Fetch one or more library artists using their identifiers.
      *
@@ -38,7 +38,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    artists(ids: string[] | null, parameters?: QueryParameters): Promise<Resource[]>;
+    artists(ids: string[] | null, parameters?: QueryParameters): Promise<AppleMusicApi.Artist[]>;
     /**
      * Fetch a library music video using its identifier.
      *
@@ -46,7 +46,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    musicVideo(id: string, parameters?: QueryParameters): Promise<Resource>;
+    musicVideo(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more library music videos using their identifiers.
      *
@@ -54,7 +54,10 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    musicVideos(ids: string[] | null, parameters?: QueryParameters): Promise<Resource[]>;
+    musicVideos(
+      ids: string[] | null,
+      parameters?: QueryParameters,
+    ): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a library playlist using its identifier.
      *
@@ -62,7 +65,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    playlist(id: string, parameters?: QueryParameters): Promise<Resource>;
+    playlist(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Playlist>;
     /**
      * Fetch one or more library playlists using their identifiers.
      *
@@ -70,7 +73,10 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    playlists(ids: string[] | null, parameters?: QueryParameters): Promise<Resource[]>;
+    playlists(
+      ids: string[] | null,
+      parameters?: QueryParameters,
+    ): Promise<AppleMusicApi.Playlist[]>;
     /**
      * Search the library using a query.
      *
@@ -78,7 +84,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    search(term: string, parameters?: QueryParameters): Promise<Resource>;
+    search(term: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch a library song using its identifier.
      *
@@ -86,7 +92,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    song(id: string, parameters?: QueryParameters): Promise<Resource>;
+    song(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Song>;
     /**
      * Fetch one or more library songs using their identifiers.
      *
@@ -94,6 +100,6 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Cloud Library API.
      */
-    songs(ids: string[] | null, parameters?: QueryParameters): Promise<Resource[]>;
+    songs(ids: string[] | null, parameters?: QueryParameters): Promise<AppleMusicApi.Song[]>;
   }
 }

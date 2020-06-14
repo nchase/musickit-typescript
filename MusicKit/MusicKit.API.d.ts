@@ -22,7 +22,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    activities(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    activities(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch an activity using its identifier.
      *
@@ -30,7 +30,7 @@ declare namespace MusicKit {
      * @param parameters A query params object that is serialized and passed
      * directly to the Apple Music API.
      */
-    activity(id: string, parameters?: QueryParameters): Promise<Resource>;
+    activity(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Add a catalog resource to a user's library.
      */
@@ -42,7 +42,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    album(id: string, parameters?: QueryParameters): Promise<Resource>;
+    album(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more albums using their identifiers.
      *
@@ -50,7 +50,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    albums(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    albums(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch an Apple curator using its identifier.
      *
@@ -58,7 +58,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    appleCurator(id: string, parameters?: QueryParameters): Promise<Resource>;
+    appleCurator(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more Apple curators using their identifiers.
      *
@@ -66,7 +66,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    appleCurators(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    appleCurators(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch an artist using its identifier.
      *
@@ -74,7 +74,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    artist(id: string, parameters?: QueryParameters): Promise<Resource>;
+    artist(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Artist>;
     /**
      * Fetch one or more artists using their identifiers.
      *
@@ -82,7 +82,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    artists(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    artists(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Artist[]>;
     /**
      * Fetch one or more charts.
      *
@@ -90,7 +90,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    charts(types: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    charts(types: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a curator using its identifier.
      *
@@ -98,7 +98,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    curator(id: string, parameters?: QueryParameters): Promise<Resource>;
+    curator(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more curators using their identifiers.
      *
@@ -106,7 +106,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    curators(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    curators(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a genre using its identifier.
      *
@@ -114,7 +114,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    genre(id: string, parameters?: QueryParameters): Promise<Resource>;
+    genre(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Genre>;
     /**
      * Fetch one or more genres using their identifiers.
      *
@@ -122,14 +122,14 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    genres(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    genres(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Genre[]>;
     /**
      * Fetch the resources in heavy rotation for the user.
      *
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    historyHeavyRotation(parameters?: QueryParameters): Promise<Resource[]>;
+    historyHeavyRotation(parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a music video using its identifier.
      *
@@ -137,7 +137,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    musicVideo(id: string, parameters?: QueryParameters): Promise<Resource>;
+    musicVideo(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more music videos using their identifiers.
      *
@@ -145,7 +145,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    musicVideos(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    musicVideos(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a playlist using its identifier.
      *
@@ -153,7 +153,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    playlist(id: string, parameters?: QueryParameters): Promise<Resource>;
+    playlist(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Playlist>;
     /**
      * Fetch one or more playlists using their identifiers.
      *
@@ -161,14 +161,14 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    playlists(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    playlists(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Playlist[]>;
     /**
      * Fetch the recently played resources for the user.
      *
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    recentPlayed(parameters?: QueryParameters): Promise<Resource[]>;
+    recentPlayed(parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a recommendation using its identifier.
      *
@@ -176,7 +176,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    recommendation(id: string, parameters?: QueryParameters): Promise<Resource>;
+    recommendation(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more recommendations using their identifiers.
      *
@@ -184,7 +184,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    recommendations(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    recommendations(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Search the catalog using a query.
      *
@@ -192,7 +192,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    search(term: string, parameters?: QueryParameters): Promise<Resource[]>;
+    search(term: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch the search term results for a hint.
      *
@@ -200,7 +200,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    searchHints(term: string, parameters?: QueryParameters): Promise<Resource[]>;
+    searchHints(term: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a song using its identifier.
      *
@@ -208,7 +208,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    song(id: string, parameters?: QueryParameters): Promise<Resource>;
+    song(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Song>;
     /**
      * Fetch one or more songs using their identifiers.
      *
@@ -216,7 +216,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    songs(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    songs(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Song[]>;
     /**
      * Fetch a station using its identifier.
      *
@@ -224,7 +224,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    station(id: string, parameters?: QueryParameters): Promise<Resource>;
+    station(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more stations using their identifiers.
      *
@@ -232,7 +232,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    stations(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
+    stations(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
     /**
      * Fetch a storefront using its identifier.
      *
@@ -240,7 +240,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    storefront(id: string, parameters?: QueryParameters): Promise<Resource>;
+    storefront(id: string, parameters?: QueryParameters): Promise<AppleMusicApi.Resource>;
     /**
      * Fetch one or more storefronts using their identifiers.
      *
@@ -248,16 +248,7 @@ declare namespace MusicKit {
      * @param parameters A query parameters object that is serialized and passed
      * directly to the Apple Music API.
      */
-    storefronts(ids: string[], parameters?: QueryParameters): Promise<Resource[]>;
-  }
-
-  /**
-   * @todo add types for Apple Music API Objects
-   * https://developer.apple.com/documentation/applemusicapi/apple_music_api_objects
-   */
-
-  interface Resource {
-    [key: string]: any;
+    storefronts(ids: string[], parameters?: QueryParameters): Promise<AppleMusicApi.Resource[]>;
   }
 
   type AddToLibraryParameters = any;
